@@ -1,0 +1,26 @@
+//Program in Java to reverse the sequence of words in a string
+// Eg. String = "Hi I am contributing to hacktoberfest"
+// Output should be "hacktoberfest to contributing am I Hi"
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    String str= sc.nextLine();
+	    String ans="";
+
+      //Making an array pof words in the given string
+	    String[] words=str.split(" ");
+	    
+	    for(int i=words.length-1;i>=0;i--){
+	        ans+=(words[i]+" ");
+	    }	    
+
+      //To remove extra spaces in the end, we will use trim() method
+      ans.trim();
+		  System.out.println(ans);
+      
+	}
+}
